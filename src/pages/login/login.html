@@ -1,9 +1,61 @@
-
 <ion-content>
 
-    <div id="outerContainter">
+  <div id="outerContainter" [style.backgroundImage]="'url('+ getImageFromAssets('loginBg1.png') +')'">
 
-
+    <div id="header">
+      <img  [src]="getImageFromAssets('orderPointLogo.png')" alt="">
     </div>
+
+    <h5 margin-vertical ion-text text-center color='appdark' class="uppercase">Register &amp; sign in</h5>
+
+    <div  id="formContainer" padding>
+      <form #f="ngForm" (ngSubmit) = "onLoginSubmit(f)">
+
+        <div margin-vertical class="form-control-container">
+          <input
+            placeholder="Email"
+            class="formInput"
+            type="email"
+            name='email'
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+            ngModel
+            required
+          />
+        </div>
+
+        <div margin-vertical class="form-control-container">
+          <input
+            placeholder="Password"
+            [type]="inputType"
+            name='password' ngModel
+            required
+            class="formInput"
+          />
+          <button ion-button icon-only clear (click) = "toggleInputType()">
+            <ion-icon [name]="inputToggleIcon"  color="firebrick5"></ion-icon>
+          </button>
+        </div>
+
+        <div text-center margin-top>
+            <button class='submitBtn' ion-button color="firebrick5" [disabled] = '!f.valid'>Login</button>
+        </div>
+
+      </form>
+    </div>
+
+    <div text-center>
+      <button ion-button clear color='dark' (click) = "forgotPassword()">Forgot Password?</button>
+    </div>
+
+    <h2 class="background double"><span>or connect with</span></h2>
+
+    <div class="socialIconsContainer" padding>
+      <img class="socialIcons" [src]="getImageFromAssets('facebook.png')" alt="">
+      <img class="socialIcons" [src]="getImageFromAssets('google-plus.png')" alt="">
+      <img class="socialIcons" [src]="getImageFromAssets('twitter.png')" alt="">
+      <img class="socialIcons" [src]="getImageFromAssets('instagram.png')" alt="">
+    </div>
+
+  </div>
 
 </ion-content>
