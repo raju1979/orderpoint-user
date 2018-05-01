@@ -135,5 +135,38 @@ page-login {
       margin:  0 10px;
     }
 
+
+
+    // /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+    // @media only screen
+    //   and (min-device-width: 414px)
+    //   and (max-device-width: 736px)
+    //   and (-webkit-min-device-pixel-ratio: 3)
+    //   and (orientation: portrait) {
+    //     #extraContent {
+    //       display: none;
+    //     }
+    // }
+
+    // /* iphone X */
+    // @media only screen
+    //   and (min-device-width: 375px)
+    //   and (max-device-height: 812px)
+    //   and (-webkit-device-pixel-ratio: 3)
+    //   and (orientation: portrait) {
+    //   #extraContent {
+    //     display: block;
+    //   }
+    // }
+
+    // @media only screen
+    //   and (min-device-width : 768px)
+    //   and (max-device-width : 1024px)
+    //   and (orientation : portrait) { /* STYLES GO HERE */
+    //     #extraContent {
+    //       display: block !important;
+    //     }
+    //   }
+
   }
 }
